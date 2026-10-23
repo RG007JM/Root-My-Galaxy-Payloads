@@ -80,6 +80,12 @@ through `kdp_assign_pgd`, and synchronizes DEFEX with `CRED_FLAGS_PROOT`.
 
 ## Reproduction notes
 
+The exact exploit source is retained under
+`src/targets/r9q-G990BXXSLIZH2/`. Its target-specific `port/` source set is
+selected only for this profile because the Samsung 5.4 stack overlay depends
+on exact compiler geometry. With NDK r27b, `make TARGET=r9q-G990BXXSLIZH2`
+reproduces the published app payload and helper hashes byte-for-byte.
+
 The exact config and target symbol versions are retained as:
 
 ```text
